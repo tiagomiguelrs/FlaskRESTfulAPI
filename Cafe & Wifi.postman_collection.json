@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "0c672b3a-6191-4899-a117-f22565502e8a",
+		"name": "Cafe & Wifi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40331916"
+	},
+	"item": [
+		{
+			"name": "Search Cafes By Location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/search?loc=Peckham",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "loc",
+							"value": "Peckham"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Cafes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Random Cafe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/random",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"random"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Almada Ponto - Bistro, Cowork & Concept Store",
+							"type": "text"
+						},
+						{
+							"key": "map_url",
+							"value": "https://maps.app.goo.gl/rras2gUXS2Zrcv527",
+							"type": "text"
+						},
+						{
+							"key": "img_url",
+							"value": "https://lh5.googleusercontent.com/p/AF1QipOfheARaDgfRi8K_voo5j9bIy-ocxmxkYYQlqJL=s398-k-no",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Porto",
+							"type": "text"
+						},
+						{
+							"key": "seats",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "has_toilet",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "has_wifi",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "has_sockets",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "can_take_calls",
+							"value": "False",
+							"type": "text"
+						},
+						{
+							"key": "coffee_price",
+							"value": "£ 2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Coffee Price",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "coffee_price",
+							"value": "£20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/update-price/40",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"update-price",
+						"40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Closed Cafe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "api-key",
+							"value": "TopSecretAPIKey",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/report-closed/22?api-key=TopSecretAPIKey",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"report-closed",
+						"22"
+					],
+					"query": [
+						{
+							"key": "api-key",
+							"value": "TopSecretAPIKey"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
