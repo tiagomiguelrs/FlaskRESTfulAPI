@@ -60,15 +60,6 @@ def get_random():
     result = db.session.execute(db.select(Cafe)).scalars()
     cafe_list = [cafe for cafe in result]
     cafe = choice(cafe_list)
-    # Can convert a row directly to dictionary
-    return jsonify(cafe.to_dict())
-    # Or make the lengthy way
-    # return jsonify(id=cafe.id,
-    #                name=cafe.name,
-    #                map_url=cafe.map_url,
-    #                img_url=cafe.img_url,
-    #                location=cafe.location,
-    #                ...)
 
 # HTTP POST - Create Record
 @app.route("/add", methods=["POST"])

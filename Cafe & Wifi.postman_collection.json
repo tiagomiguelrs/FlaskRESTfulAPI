@@ -30,7 +30,8 @@
 							"value": "Peckham"
 						}
 					]
-				}
+				},
+				"description": "### GET /search\n\nThis endpoint retrieves information about a location based on the provided query parameter.\n\n#### Request\n\n- Query Parameter\n    \n    - loc: The location for which information is to be retrieved.\n        \n\n#### Response\n\nThe response is in JSON format and follows the schema below:\n\n``` json\n[\n    {\n        \"can_take_calls\": boolean,\n        \"coffee_price\": string,\n        \"has_sockets\": boolean,\n        \"has_toilet\": boolean,\n        \"has_wifi\": boolean,\n        \"id\": integer,\n        \"img_url\": string,\n        \"location\": string,\n        \"map_url\": string,\n        \"name\": string,\n        \"seats\": string\n    }\n]\n\n ```"
 			},
 			"response": []
 		},
@@ -52,7 +53,8 @@
 					"path": [
 						"all"
 					]
-				}
+				},
+				"description": "### Get All Data\n\nThis endpoint makes an HTTP GET request to retrieve all data from the server.\n\n#### Request Body\n\nThis request does not require a request body.\n\n#### Response Body\n\nThe response will contain the data retrieved from the server in JSON format."
 			},
 			"response": []
 		},
@@ -74,7 +76,8 @@
 					"path": [
 						"random"
 					]
-				}
+				},
+				"description": "### GET /random\n\nThis endpoint retrieves random information about a location.\n\n#### Response\n\nThe response is in JSON format and has the following schema:\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"can_take_calls\": {\n      \"type\": \"boolean\"\n    },\n    \"coffee_price\": {\n      \"type\": \"string\"\n    },\n    \"has_sockets\": {\n      \"type\": \"boolean\"\n    },\n    \"has_toilet\": {\n      \"type\": \"boolean\"\n    },\n    \"has_wifi\": {\n      \"type\": \"boolean\"\n    },\n    \"id\": {\n      \"type\": \"integer\"\n    },\n    \"img_url\": {\n      \"type\": \"string\"\n    },\n    \"location\": {\n      \"type\": \"string\"\n    },\n    \"map_url\": {\n      \"type\": \"string\"\n    },\n    \"name\": {\n      \"type\": \"string\"\n    },\n    \"seats\": {\n      \"type\": \"string\"\n    }\n  }\n}\n\n ```"
 			},
 			"response": []
 		},
@@ -151,7 +154,8 @@
 					"path": [
 						"add"
 					]
-				}
+				},
+				"description": "### Add New Location\n\nThis endpoint allows the user to add a new location with details such as name, map URL, image URL, location, seating capacity, availability of facilities like toilet, wifi, sockets, ability to take calls, and the price of coffee.\n\n#### Request Body Parameters\n\n- `name` (text): The name of the location.\n    \n- `map_url` (text): The URL to the location on the map.\n    \n- `img_url` (text): The URL to the image of the location.\n    \n- `location` (text): The address or geographical location of the place.\n    \n- `seats` (text): The number of available seats at the location.\n    \n- `has_toilet` (text): Indicates if the location has a toilet (true/false).\n    \n- `has_wifi` (text): Indicates if the location has wifi (true/false).\n    \n- `has_sockets` (text): Indicates if the location has power sockets (true/false).\n    \n- `can_take_calls` (text): Indicates if the location allows phone calls (true/false).\n    \n- `coffee_price` (text): The price of coffee at the location.\n    \n\n#### Response\n\nThe response will include the status of the request, along with any relevant message or data."
 			},
 			"response": []
 		},
@@ -184,7 +188,8 @@
 						"update-price",
 						"40"
 					]
-				}
+				},
+				"description": "### Update Coffee Price\n\nThis endpoint is used to update the price of a specific coffee item.\n\n#### Request Body\n\n- `coffee_price` (text) - The new price of the coffee item.\n    \n\n#### Response\n\nThe response for this request is in the form of a JSON schema. However, the last execution returned a response with status code 200 and content type text/xml. The response body was null."
 			},
 			"response": []
 		},
@@ -223,7 +228,8 @@
 							"value": "TopSecretAPIKey"
 						}
 					]
-				}
+				},
+				"description": "### DELETE /report-closed/22\n\nDeletes the report with the ID 22.\n\n#### Request Body Parameters\n\n- `api-key` (text): The API key for authentication.\n    \n\n#### Response\n\nThe response is in JSON format with the following schema:\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"Ok\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"Success\": {\n          \"type\": \"string\"\n        }\n      }\n    }\n  }\n}\n\n ```\n\nThe response indicates the success of the operation with an \"Ok\" object containing a \"Success\" message."
 			},
 			"response": []
 		}
