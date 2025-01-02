@@ -44,7 +44,7 @@ def home():
 # HTTP GET - Read Record
 @app.route("/search", methods=["GET"])
 def search():
-    cafe_location = request.args.get("loc")     # Gets the argument "loc" passed in the search bar "/search?loc=<loc>", of through postman
+    cafe_location = request.args.get("loc")     # Gets the argument "loc" passed in the search bar "/search?loc=<loc>", or through postman
     result = db.session.execute(db.select(Cafe).where(Cafe.location == cafe_location).order_by(Cafe.name)).scalars()
     cafe_list = [cafe.to_dict() for cafe in result]
     return jsonify(cafe_list)
